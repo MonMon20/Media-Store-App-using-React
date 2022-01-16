@@ -1,5 +1,5 @@
 const Basket = ({ basketItems, removeFromBasket }) => {
-  if (basketItems.length === 0) {
+  if (!basketItems || basketItems.length === 0) {
     return <div>Sorry, no items in basket...</div>;
   } else {
     return (
