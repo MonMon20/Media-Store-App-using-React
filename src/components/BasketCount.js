@@ -1,9 +1,9 @@
-const BasketCount = ({ count }) => {
+const BasketCount = ({ basketCount }) => {
   let text = "";
-  if (count === 1) {
+  if (basketCount === 1) {
     text = "1 item";
-  } else if (count > 1) {
-    text = `${count} items`;
+  } else if (basketCount > 1) {
+    text = `${basketCount} items`;
   }
   return <div id="basketcount">{text}</div>;
 };

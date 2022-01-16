@@ -10,6 +10,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 function App() {
   const [products, setProducts] = useState(defaultProducts);
   const [basketItems, setBasketItems] = useState([]);
+  const [term, setTerm] = useState("");
 
   const addToBasket = (id) => {
     // get product object
@@ -49,7 +50,6 @@ function App() {
       .then((res) => res.json())
       .then(
         (result) => {
-          console.log("result.results", result.results);
           setProducts(result.results);
         },
         (error) => {}
@@ -65,16 +65,15 @@ function App() {
             <About />
           </Route>
           <Route path="/basket">
-            <Basket
-              basketItems={basketItems}
-              removeFromBasket={removeFromBasket}
-            />
+            <Basket basket={basketItems} removeFromBasket={removeFromBasket} />
           </Route>
           <Route path="/">
             <Home
               products={products}
               addToBasket={addToBasket}
               search={search}
+              term={term}
+              setTerm={setTerm}
             />
           </Route>
         </Switch>

@@ -2,21 +2,19 @@ import BasketItems from "../components/Basket";
 import BasketCount from "../components/BasketCount";
 import BasketTotal from "../components/BasketTotal";
 
-const Basket = ({ basketItems, removeFromBasket }) => {
+const Basket = ({ basket = [], removeFromBasket }) => {
   let totalPrice = 0;
-  for (let i = 0; i < basketItems.length; i++) {
-    totalPrice += basketItems[i].trackPrice;
+  for (let i = 0; i < basket.length; i++) {
+    totalPrice += basket[i].trackPrice;
   }
+  totalPrice = totalPrice.toFixed(2);
 
   return (
     <div id="basket">
       <h2>Basket</h2>
-      <BasketCount count={basketItems.length} />
-      <BasketItems
-        basketItems={basketItems}
-        removeFromBasket={removeFromBasket}
-      />
-      <BasketTotal totalPrice={totalPrice} />
+      <BasketCount basketCount={basket.length} />
+      <BasketItems basket={basket} removeFromBasket={removeFromBasket} />
+      <BasketTotal basketTotal={totalPrice} />
     </div>
   );
 };

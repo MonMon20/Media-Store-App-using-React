@@ -1,10 +1,6 @@
-import React, { useState } from "react";
-
-const Search = ({ search }) => {
-  const [value, setValue] = useState("");
-
+const Search = ({ search, term, setTerm }) => {
   const handleChange = (event) => {
-    setValue(event.target.value);
+    setTerm(event.target.value);
   };
 
   return (
@@ -13,7 +9,7 @@ const Search = ({ search }) => {
         id="searchAPI"
         onSubmit={(e) => {
           e.preventDefault();
-          search(value);
+          search(term);
         }}
       >
         <label>
@@ -22,13 +18,13 @@ const Search = ({ search }) => {
             placeholder="Enter search term..."
             id="term"
             name="term"
-            value={value}
+            value={term}
             onChange={handleChange}
           />
         </label>
         <input type="submit" value="Search"></input>
       </form>
-      {value && <h1>Searching for terms:{value}</h1>}
+      {term && <h1>Searching for terms:{term}</h1>}
     </div>
   );
 };

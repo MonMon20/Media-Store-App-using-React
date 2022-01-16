@@ -5,6 +5,7 @@ const Product = ({
   addToBasket,
   id,
   longDescription,
+  removeFromBasket,
 }) => {
   const handleAddToBasketClick = () => {
     console.log("click");
@@ -16,20 +17,33 @@ const Product = ({
     trimLongDescription = longDescription.substring(0, 300) + "...";
   }
 
+  let showRemoveButton = false;
+  if (removeFromBasket) {
+    showRemoveButton = true;
+  }
   return (
-    <div class="product">
+    <div className="product">
       <img src={thumbnail} alt={name} />
-      <div class="details">
+      <div className="details">
         <h2>{name}</h2>
-        <p class="price">£{price}</p>
+        <p className="price">£{price}</p>
         {trimLongDescription && (
-          <p class="description">{trimLongDescription}</p>
+          <p className="description">{trimLongDescription}</p>
         )}
       </div>
-      <div class="buttons">
-        <button class="add-button" onClick={handleAddToBasketClick}>
-          Add to Basket
-        </button>
+      <div className="buttons">
+        {showRemoveButton ? (
+          <button
+            className="remove-button"
+            onClick={() => removeFromBasket(id)}
+          >
+            Remove
+          </button>
+        ) : (
+          <button className="add-button" onClick={handleAddToBasketClick}>
+            Add to Basket
+          </button>
+        )}
       </div>
     </div>
   );
