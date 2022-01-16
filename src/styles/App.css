@@ -1,0 +1,146 @@
+body {
+  line-height: 1.4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: #ca61fb;
+}
+
+.product {
+  padding: 5px 10px;
+}
+.product {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #d1d1d1;
+  display: flex;
+}
+
+.product img {
+  min-width: 100px;
+}
+
+.product div.details {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 80%;
+}
+
+.product h2 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.product .price {
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#search input[type="submit"],
+.product .add-button {
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 5px;
+  min-width: 80px;
+  color: #fff;
+  float: right;
+  font-size: 1.1em;
+}
+
+.product .add-button {
+  background-color: #4f95ff;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+#header #breadcrumb,
+#header h1 {
+  text-align: center;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+#search {
+  text-align: center;
+}
+
+#search form {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+#search input[type="text"] {
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #000;
+  font-size: 1.3em;
+  border: 2px solid #9e9e9e;
+  width: 80%;
+  margin-right: 5px;
+}
+
+#search input[type="submit"] {
+  background-color: #4f95ff;
+  width: 15%;
+  margin-right: 5px;
+}
+#search input[type="submit"],
+.product .add-button {
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 5px;
+  min-width: 80px;
+  color: #fff;
+  float: right;
+  font-size: 1.1em;
+}
+
+.remove-button {
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 20px;
+  color: #fff;
+  float: right;
+  font-size: 1.1em;
+  background-color: #bd1515;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+#baskettotal {
+  font-size: 1.5em;
+  width: 100%;
+  font-weight: 700;
+  text-align: center;
+}

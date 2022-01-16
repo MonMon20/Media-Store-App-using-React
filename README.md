@@ -104,7 +104,7 @@ Your app should keep a count of the number of items in your `<Basket/>` and disp
 <BasketCount basketCount={count} />
 ```
 
-Expected **functions** and **props** for the `<Product/>` component are listed below:
+Expected **functions** and **props** for the `<Product/>` component are listed below(what she really means is `<Basket />`):
 
 ### Props
 
