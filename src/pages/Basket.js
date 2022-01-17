@@ -11,8 +11,11 @@ const Basket = ({ basket = [], removeFromBasket }) => {
 
   return (
     <div id="basket">
-      <h2>Basket</h2>
-      <BasketCount basketCount={basket.length} />
+      <div className="basket_heading">
+        <h2>Basket</h2>
+        <BasketCount basketCount={basket.length} />
+      </div>
+
       <BasketItems basket={basket} removeFromBasket={removeFromBasket} />
       <BasketTotal basketTotal={totalPrice} />
     </div>

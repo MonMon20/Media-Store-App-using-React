@@ -1,22 +1,25 @@
 import Product from "./Product";
 
-const ProductList = ({ items = [], addToBasket }) => {
+const ProductList = ({ items = [], addToBasket, currentPageNumber }) => {
   return (
     <div id="results">
-      <h2>Suggested For You</h2>
+      <div className="homepage_header">
+        <h2>Suggested For You</h2>
+        <span>Page: {currentPageNumber}</span>
+      </div>
 
       {items &&
-        items.map((p, i) => {
-          if (!p.hidden) {
+        items.map((item, index) => {
+          if (!item.hidden) {
             return (
               <Product
-                key={i}
-                kind={p.kind}
-                id={p.trackId}
-                name={p.trackName}
-                thumbnail={p.artworkUrl100}
-                price={p.trackPrice}
-                longDescription={p.longDescription}
+                key={index}
+                kind={item.kind}
+                id={item.trackId}
+                name={item.trackName}
+                thumbnail={item.artworkUrl100}
+                price={item.trackPrice}
+                longDescription={item.longDescription}
                 addToBasket={addToBasket}
               />
             );

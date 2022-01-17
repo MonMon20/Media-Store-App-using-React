@@ -6,18 +6,22 @@ const Header = (props) => {
     count_text = `(${props.itemCount})`;
   }
   return (
-    <div id="header">
-      <h1>Media Store</h1>
-      <div id="breadcrumb">
-        <Link to="/" id="homelink">
-          Home |&nbsp;
-        </Link>
-        <Link to="/about" id="aboutlink">
-          About |&nbsp;
-        </Link>
-        <Link to="/basket" id="basketlink">
-          Basket&nbsp;{count_text}
-        </Link>
+    <div id="header_wrapper">
+      <div className="container">
+        <div id="header">
+          <h1>Rebecca's Media Store</h1>
+          <div id="breadcrumb">
+            <Link to="/" id="homelink">
+              Home |&nbsp;
+            </Link>
+            <Link to="/about" id="aboutlink">
+              About |&nbsp;
+            </Link>
+            <Link to="/basket" id="basketlink">
+              Basket&nbsp;{count_text}
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

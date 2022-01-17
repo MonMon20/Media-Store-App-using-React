@@ -24,7 +24,7 @@ const Search = ({ search, term, setTerm }) => {
         </label>
         <input type="submit" value="Search"></input>
       </form>
-      {term && <h1>Searching for terms:{term}</h1>}
+      {term && <h1 className="search_term">Searching for terms:{term}</h1>}
     </div>
   );
 };
