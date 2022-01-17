@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Playfair+Display:wght@600&display=swap");
+
 body {
   line-height: 1.4;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Amatic SC", cursive;
+  font-family: "Playfair Display", serif;
 }
 
 * {
@@ -49,14 +52,15 @@ body {
 }
 
 .product h2 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Amatic SC", cursive;
+  font-family: "Playfair Display", serif;
 }
 
 .product .price {
   font-size: 1.2em;
   font-weight: 700;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Amatic SC", cursive;
+  font-family: "Playfair Display", serif;
 }
 
 #search input[type="submit"],
@@ -74,7 +78,7 @@ body {
   background-color: #2d6a4f;
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
+
 @media only screen and (min-width: 992px) {
   .container {
     width: 50%;
@@ -190,7 +194,7 @@ a {
 
 .previous.disabled,
 .next.disabled {
-  cursor: none;
+  cursor: pointer;
   opacity: 0.3;
 }
 
