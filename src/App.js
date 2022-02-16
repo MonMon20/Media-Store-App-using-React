@@ -4,7 +4,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Basket from "./pages/Basket";
 import defaultProducts from "./models/data.json";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
